@@ -1,9 +1,6 @@
-<style>
-    g {color: Gray}
-</style>
 # Nodejs:
 
-<g> Practicas realizadas con Nodejs. </g>
+Practicas realizadas con Nodejs.
 
 ## Fundamentos
 
