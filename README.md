@@ -6,6 +6,8 @@ Practicas realizadas con Nodejs.
 
 - [Hello World](01-fundamentos/app.js)
 - [Modificación de archivos](01-fundamentos/file-system.js)
+- [Desestructuring](02-bases/src/js-foundation/02-destructuring.js)
+- [Callback](02-bases/src/js-foundation/03-callbacks.js)
 
 ## Notas
 
