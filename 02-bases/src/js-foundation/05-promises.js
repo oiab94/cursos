@@ -8,8 +8,22 @@ const getPokemonById = ( id ) => {
 }
 
 
+// Promesa utilizando async y await
+const getPokemonByIdAsync = async ( id ) => {
+	try {
+		const url = `https://pokeapi.co/api/v2/pokemon/${ id }`;
+		const response = await fetch( url );
+		const pokemon = await response.json();
+
+		return pokemon;
+	} catch (error) {
+		throw new Error('No se pudo obtener el pokemon');
+	}
+}
+
+
 // EJECUCIÓN
-getPokemonById( 1 )
+getPokemonByIdAsync( 1 )
 	.then( pokemon => console.log(pokemon))
-	.catch( error => console.error(`Error: ${ error } no se pudo obtener el pokemon`))
+	.catch( error => console.error(`${ error }`))
 	.finally( () => console.log('Proceso finalizado'));
