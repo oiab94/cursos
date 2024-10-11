@@ -17,6 +17,25 @@ const httpClientAdapter = {
 
 }
 
+// Aplicación de patrón adaptador para el cliente HTTP con axios
+const axios = require('axios');
+
+const httpAxiosAdapter = {
+	get: async ( url ) => {
+		try {
+			const response = await axios.get( url );
+			const data = response.data;	
+
+			return data;
+		}
+		catch (error) {
+			throw new Error('No se pudo obtener la información');
+		}
+	},
+
+};
+
 module.exports = {
 	httpClientAdapter,
+	httpAxiosAdapter,
 }

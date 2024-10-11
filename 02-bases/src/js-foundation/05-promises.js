@@ -31,8 +31,17 @@ const getPokemonByIdAdapter = ( id ) => {
 }
 
 
+// Promesa utilizando patrón adaptador con axios
+const { httpAxios } = require('../js-foundation/public/adapter');
+
+const getPokemonByIdAxiosAdapter = ( id ) => {
+	let url = `https://pokeapi.co/api/v2/pokemon/${ id }`;
+
+	return httpAxios.get( url );
+}
+
 // EJECUCIÓN
-getPokemonByIdAdapter( 1 )
+getPokemonByIdAxiosAdapter( 1 )
 	.then( pokemon => console.log(pokemon))
 	.catch( error => console.error(`${ error }`))
 	.finally( () => console.log('Proceso finalizado'));
