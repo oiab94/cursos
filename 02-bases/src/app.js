@@ -1,5 +1,8 @@
+//06- PROMISES
+require('./js-foundation/05-promises');
+
 // 05-FACTORY FUNCTION
-require('./js-foundation/04-factory-function');
+//require('./js-foundation/04-factory-function');
 
 
 
