@@ -21,9 +21,18 @@ const getPokemonByIdAsync = async ( id ) => {
 	}
 }
 
+// Promesa utilizando patrón adaptador
+const { http } = require('../js-foundation/public/adapter');
+
+const getPokemonByIdAdapter = ( id ) => {
+	let url = `https://pokeapi.co/api/v2/pokemon/${ id }`;
+
+	return http.get( url );
+}
+
 
 // EJECUCIÓN
-getPokemonByIdAsync( 1 )
+getPokemonByIdAdapter( 1 )
 	.then( pokemon => console.log(pokemon))
 	.catch( error => console.error(`${ error }`))
 	.finally( () => console.log('Proceso finalizado'));
