@@ -1,4 +1,4 @@
-const buildMakePerson = (getUUID: Function, getAge: Function) => {
+const buildMakePerson = (getUUID: () => string, getAge: (birthdate: string) => number) => {
 	return ( name: string, birthdate: string ) => {
 		return {
 			id: getUUID(),
