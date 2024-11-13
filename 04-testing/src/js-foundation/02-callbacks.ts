@@ -1,3 +1,4 @@
+
 interface User {
 	id: number;
 	name: string;
@@ -18,15 +19,23 @@ const users: User[] = [
 const getUserById = (id: number, callback: UserCallback): void => {
 	const user = users.find( user => user.id === id );
 
-	return user ? callback( undefined, user ) : 
-								callback( 'User not found', undefined );
+	setTimeout(() => {
+		console.log('Waiting...');
+	}, 10000);
+
+	return user ? callback( undefined, user ) 
+							: callback( 'User not found', undefined );
 }
 
 
-getUserById(1, ( error, User ) => {
+export {
+	getUserById
+};
+
+/*getUserById(1, ( error, User ) => {
 	if ( error) {
 		console.log( error );
 	} else {
 		console.log( User );
 	}
-});
+});*/
