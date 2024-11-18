@@ -19,10 +19,6 @@ const users: User[] = [
 const getUserById = (id: number, callback: UserCallback): void => {
 	const user = users.find( user => user.id === id );
 
-	setTimeout(() => {
-		console.log('Waiting...');
-	}, 10000);
-
 	return user ? callback( undefined, user ) 
 							: callback( 'User not found', undefined );
 }
