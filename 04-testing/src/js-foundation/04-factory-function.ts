@@ -21,3 +21,8 @@ const buildMakePerson = ( getUUID: getUUID, getAge: getAge ): PersonMaker => {
 		}
 	}
 };
+
+
+export {
+	buildMakePerson,
+}
