@@ -1,5 +1,5 @@
 import { NumberFunction } from "./public/functions";
 
-const numberFunction = new NumberFunction(42, 5);
+const numberFunction = new NumberFunction(11);
 
-numberFunction.multiply();
+numberFunction.multiplyTable();
