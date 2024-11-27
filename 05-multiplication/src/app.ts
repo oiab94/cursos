@@ -1,5 +1,5 @@
-import { NumberFunction } from "./public/functions";
+import { parseSync, parseSyncHidenBin } from './services'
 
-const numberFunction = new NumberFunction(11);
-
-numberFunction.multiplyTable();
+console.log(process.argv)
+console.log(parseSync)
+console.log(parseSyncHidenBin)
