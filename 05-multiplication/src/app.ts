@@ -1,5 +1,5 @@
-import { parseSync, parseSyncHidenBin } from './services'
+import { YargsService } from "./services/yarg.service";
 
-console.log(process.argv)
-console.log(parseSync)
-console.log(parseSyncHidenBin)
+const args = new YargsService();
+
+args.example();
