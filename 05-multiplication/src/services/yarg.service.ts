@@ -1,5 +1,4 @@
-import { demandOption } from 'yargs'
-import { yargs, hideBin } from '../plugins'
+import { hideBin, yargs } from '../plugins'
 
 export class YargsService {
   constructor() {}

@@ -1,5 +1,4 @@
-import { access, Dirent, mkdirSync, writeFile, writeFileSync } from 'fs';
-import { constants } from 'fs/promises';
+import { mkdirSync, writeFileSync } from 'fs';
 
 export class NumberFunction {
   private text: string;
@@ -32,7 +31,6 @@ export class NumberFunction {
     }
   }
 
-
   private createDirectory(path: string): void {
     const directoryCreated = mkdirSync(this.fileDirectory, { recursive: true })
     console.log(
@@ -48,4 +46,5 @@ export class NumberFunction {
       { encoding: 'utf8', flag: 'a' }
     );
   }
+
 }
