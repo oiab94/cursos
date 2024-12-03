@@ -1,5 +1,17 @@
-import { YargsService } from "./services/yarg.service";
+import { YargsService } from './services/yarg.service'
 
-const args = new YargsService();
+/**
+ * Función asíncrona autoejecutable
+ */
+(
+  async () => {
+    await main();
+  }
+)()
 
-args.example();
+
+async function main() {
+  const yargsService = new YargsService();
+
+  yargsService.multiplicacionCLI();
+}

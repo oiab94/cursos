@@ -24,7 +24,29 @@ export class YargsService {
         .options({})
         .help()
         .parseSync([ 'hello', '--name', 'Oscar' ]) //TEST: Hello Oscar welcome to yargs!!!!!
+  }
 
-    console.log('yargsgResult', yargsgResult)
+
+  public multiplicacionCLI() {
+    const result = yargs( hideBin( process.argv ) )
+            .scriptName('cli-multiplicacion-test')
+            .usage('$0 <cmd> [args]')
+            .command(
+              'tabla [base]',
+              'Imprime en consola la tabla de multiplicar de la base que le pases como argumento [base]',
+              ( yargs ) => {
+                yargs.positional(
+                  'base', {
+                    alias: 'b',
+                    type: 'number',
+                    describe: 'La base del número a multiplicar',
+                    demandOption: true,
+                  }
+                )
+              },
+            )
+            .options({})
+            .help()
+            .parseSync();
   }
 }
