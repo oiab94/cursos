@@ -33,13 +33,9 @@ export class NumberFunction {
 
   private createDirectory(path: string): void {
     const directoryCreated = mkdirSync(this.fileDirectory, { recursive: true })
-    console.log(
-      directoryCreated ? `${ path } created`: `${ path } is existing`
-    );
   }
 
   private saveToFile(data: string): void {
-    console.log(data);
     writeFileSync(
       this.fileDirectory + this.fileName,
       data + '\n',
