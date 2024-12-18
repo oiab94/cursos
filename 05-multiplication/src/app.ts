@@ -1,4 +1,4 @@
-import { yarg } from './services/yarg.service'
+import { args } from './services/yarg.service';
 
 /**
  * Función asíncrona autoejecutable
@@ -11,5 +11,5 @@ import { yarg } from './services/yarg.service'
 
 
 function main() {
-  console.log(yarg);
+  console.log(args)
 }
